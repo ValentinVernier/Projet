@@ -7,26 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
-vehiculeUpdate:any;
+carUpdate:any;
 
-  vehiculeUn:any= { 
-    name : "Mercedes AMG",
-    price : 42000 + "€"
-  }
-  vehiculeDeux:any= { 
-    name : "Range Rover Evoque",
-    price : 33000 + "€"
-  }
-  vehiculeTrois:any= { 
-    name : "MFerrari F50",
-    price : 35000 + "€"
-  }
+carOne:any = {
+  name: "pagani huayra",
+  pays: "italie",
+  power: "765",
+  perf: 3.2
+}
+carTwo:any = {
+  name: "koenigsegg agera rs",
+  pays: "suède",
+  power: 1383,
+  perf: 2.6
+}
+carThree:any = {
+  name: "zenvo tsr s",
+  pays: "danemark",
+  power: "1200",
+  perf: 2.8
+}
 
 
   constructor() { }
 
   ngOnInit() {
-    this.vehiculeUpdate = new Date();
+    this.carUpdate = new Date();
   }
 
 }
