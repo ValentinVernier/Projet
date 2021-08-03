@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CarItemComponent implements OnInit {
 
+
+  
   @Input() car:any;
 
   constructor() { }
