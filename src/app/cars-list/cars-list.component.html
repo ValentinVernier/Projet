@@ -2,25 +2,8 @@
     Nos Voitures
 </h1>
 
-{{ mardiMatin }}
+<app-car-item [enfant]="enfantUn" ></app-car-item>
 
-{{ age }} ans
+<app-car-item [enfant]="enfantDeux" ></app-car-item>
 
-<h2>Property binding - bind = lié</h2>
-
-<div class=" text-center shadow border p-2 bg-dark text-white">
-    <h1>{{ game.title }}</h1>
-    <p>Support: {{ game.support }}</p>
-    <p>Multi: {{ game.multi }} joueurs</p>
-    <p>Stock: {{ getStock() }} en stock</p>
-
-    <img [src]="coverImage" alt="{{ game.title }}">
-
-    <button class="my-3 btn btn-success" [disabled]="isNotAvailable()">
-        Commander
-    </button>
-
-    <input class="form control" type="text" [value]="userEmail">
-</div>
-
-
+<app-car-item [enfant]="enfantTrois" ></app-car-item>
