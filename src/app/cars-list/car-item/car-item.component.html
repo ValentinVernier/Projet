@@ -1,10 +1,12 @@
 <div class="p-5 row card m-2 border-info">
+    
     <p class="h2">Nom: {{ car.name }}</p>
     <p> Origine: {{ car.pays }}</p>
     <p>0 à 100 en {{ car.perf }} S</p>
     <p>Puissance: {{ car.power }} CH</p>
-    
+    <p>{{ bookingMessage }}</p>
+    <button class="btn btn-danger" (click)="onBooking()" [disabled]="isBooked"  >Je reserve!!</button>
+
 </div>
 
-<button (click)="onClickButton()"  class="btn btn-danger my-5 shadow" [disabled]="btn"  >Je reserve!!</button>
 

@@ -7,18 +7,21 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./car-item.component.css']
 })
 export class CarItemComponent implements OnInit {
-  btn: boolean = false;
-
-  onClickButton(){
-   this.btn = true;
-   alert("Vous avez réservé cette voiture!");
-  }
+ 
+  bookingMessage:string = "Reservez maintenant!";
+  isBooked:boolean = false;
   
-  @Input() car:any;
+  @Input() car:any; 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onBooking(){
+    this.isBooked = true;
+    this.bookingMessage="Cette voiture est déjà réservée!"
+    
   }
 
 }
