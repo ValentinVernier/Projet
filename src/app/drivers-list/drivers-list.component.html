@@ -2,7 +2,22 @@
     Nos Pilotes
 </h1>
 
-<p *ngIf="isOnline" class="p-5 card bg-info">
+<div *ngIf="isOnline" class="p-5 card bg-info">
 
-    Thomas à dit à Andrea que...
-</p>
+    <h2>{{book.title}}</h2>
+
+    <p>{{book.author}}</p>
+
+    <p>
+        <span *ngIf="book.price">Prix: {{book.price}} €</span>
+        <span *ngIf="book.price == null">Non communiqué</span>
+    </p>
+</div>
+
+<div class="p-5 card bg-warning">
+    <ul>
+        <li *ngFor="let game of games">
+            {{game}}
+        </li>
+    </ul>
+</div>

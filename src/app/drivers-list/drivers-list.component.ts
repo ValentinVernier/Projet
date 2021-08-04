@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DriversListComponent implements OnInit {
 
+  isOnline:boolean = true;
+
+  book:any = {
+    title:"Le secret des croisades",
+    author: "Thomandrea",
+    price: 15
+  }
+
+  games:string[] = ["Pes6", "MineCraft", "Shenmue", "Evil Dead"];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -14,5 +24,4 @@ export class DriversListComponent implements OnInit {
   }
 
 
-  isOnline:boolean = true;
 }
