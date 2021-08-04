@@ -10,6 +10,9 @@ export class DriversListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  
   }
 
+
+  isOnline:boolean = true;
 }
