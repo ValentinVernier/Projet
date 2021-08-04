@@ -1,5 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule , LOCALE_ID} from '@angular/core'; // Add LOCALE_ID
 import { BrowserModule } from '@angular/platform-browser';
+
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+registerLocaleData(localeFr, 'fr');
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +28,7 @@ import { CarItemComponent } from './cars-list/car-item/car-item.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
