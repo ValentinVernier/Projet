@@ -10,7 +10,7 @@ export class CarItemComponent implements OnInit {
   btn: boolean = false;
 
   onClickButton(){
-   this.btn = false;
+   this.btn = true;
    alert("Vous avez réservé cette voiture!");
   }
   
