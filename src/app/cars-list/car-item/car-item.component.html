@@ -9,7 +9,11 @@
             <span *ngIf="car.pays">Origine: {{car.pays | uppercase }}</span>
             <span *ngIf="car.pays ==''"> Origine: NC</span>
         </p>
-        <p>
+        <p [ngClass]="{
+            'badge': true,
+            'badge-warning':car.power> 1000,
+            'badge-info':car.power <= 1000
+        }">
             <span *ngIf="car.power">Puissance : {{car.power}} CH</span>
             <span *ngIf="car.power == null"> Puissance : NC</span>
          </p>
@@ -18,7 +22,7 @@
             <span *ngIf="car.perf == null OR car.perf < 0">Perf: NC</span>
         </p>
 
-        <p>{{bookingMessage}}</p>
+        <p [ngClass]="{'text-success':isBooked}">{{bookingMessage}}</p>
         <button class="btn btn-primary" (click)="onBooking()" [disabled]="isBooked">Réserver</button>
     </div>
 </div>
