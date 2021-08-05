@@ -1,6 +1,7 @@
 <h1 class="my-5">
     Nos Pilotes
 </h1>
+<!--
 
 <div *ngIf="isOnline" class="p-5 card bg-info">
 
@@ -23,4 +24,36 @@
     <p *ngFor="let x of games; let i = index">
        {{i}} {{x | uppercase}}
     </p>
+</div>
+-->
+<p [style.background-color]="colorOne">
+    Style.color est une couleur en props!
+</p>
+
+<p [style.color]="getColor()">
+    Style.color peut également fonctionner avec une méthode!
+</p>
+
+<p [style.background-color]="'gold'">
+    Style.color fonctionne comme ça mais pas ouf donc à éviter
+</p>
+
+<h2 [style.background-color]="onOff ? colorOne : getColor() " >
+    affichage selon une condition 
+    <br>
+    ok nice 
+</h2>
+
+<button  (click)="onSwitch()" class="btn btn-info my-5">
+<span *ngIf="!onOff">ON</span>
+<span *ngIf="onOff">OFF</span>
+</button>
+
+<div [ngStyle]="{ color:colorOne,
+                    margin:marginPts,
+                    padding:'20px'
+                }" >
+    Avec du ngStyle maintenant
+    Déclare un objet dedans
+    Donc on peut en mettre plusieurs, donc plus de possibilité!
 </div>

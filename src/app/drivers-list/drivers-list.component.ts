@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DriversListComponent implements OnInit {
 
+  /*
   isOnline:boolean = true;
 
   book:any = {
@@ -16,11 +17,29 @@ export class DriversListComponent implements OnInit {
   }
 
   games:string[] = ["Pes6", "MineCraft", "Shenmue", "Evil Dead"];
+*/
+  colorOne:string= "purple";
+
+  onOff:any= true;
+
+  marginPts:string = "50px";
 
   constructor() { }
 
   ngOnInit(): void {
   
+  }
+
+  getColor(){
+    return "green";
+  }
+
+  onSwitch(){
+    if(this.onOff){
+      this.onOff =false;
+    }else{
+      this.onOff=true;
+    }
   }
 
 
