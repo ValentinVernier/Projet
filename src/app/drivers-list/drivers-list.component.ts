@@ -23,17 +23,26 @@ export class DriversListComponent implements OnInit {
   getColor(){
     return "green";
   }
-
-*/
   colorOne:string= "purple";
 
   onOff:any= true;
 
-  product:any ={
+  product:any = {
     label: "iphone 12",
     price : "un rein",
     stock: 0
   }
+
+
+   onSwitch(){
+    if(this.onOff){
+      this.onOff =false;
+    }else{
+      this.onOff=true;
+    }
+  }
+*/
+  
 
   
   constructor() { }
@@ -42,13 +51,7 @@ export class DriversListComponent implements OnInit {
   
   }
 
-  onSwitch(){
-    if(this.onOff){
-      this.onOff =false;
-    }else{
-      this.onOff=true;
-    }
-  }
+ 
 
 
 }
