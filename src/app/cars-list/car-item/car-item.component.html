@@ -1,9 +1,15 @@
-<div class="p-5 row card m-2 border-info">
-    <p class="h2">Nom: {{ car.name | titlecase }}</p>
-    <p> Origine: {{ car.pays | uppercase }}</p>
-    <p>0 à 100 en {{ car.perf }} S</p>
-    <p>Puissance: {{ car.power }} CH</p>
-    <p>{{ bookingMessage }}</p>
-    <button class="btn btn-danger" (click)="onBooking()" [disabled]="isBooked"  >Je reserve!!</button>
-    <hr>
+<div class="card text-center shadow">
+    <div class="card-header bg-dark text-white ">
+        <h2 class="card-title">{{car.name | titlecase }}</h2>
+    </div>
+    <div class="card-body">
+        <img [src]="car.coverImage" class="img-fluid" alt="photo {{car.name}}">
+        <hr>
+        <p>Origine: {{car.pays | uppercase }}</p>
+        <p>Puissance: {{car.power}} CH</p>
+        <p>0 à 100 km/h: {{car.perf}} sec </p>
+        <p>{{bookingMessage}}</p>
+        <button class="btn btn-primary" (click)="onBooking()" [disabled]="isBooked">Réserver</button>
+    </div>
 </div>
+<hr>
