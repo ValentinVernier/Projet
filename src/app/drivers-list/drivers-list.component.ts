@@ -17,21 +17,29 @@ export class DriversListComponent implements OnInit {
   }
 
   games:string[] = ["Pes6", "MineCraft", "Shenmue", "Evil Dead"];
+
+  marginPts:string = "50px";
+
+  getColor(){
+    return "green";
+  }
+
 */
   colorOne:string= "purple";
 
   onOff:any= true;
 
-  marginPts:string = "50px";
+  product:any ={
+    label: "iphone 12",
+    price : "un rein",
+    stock: 0
+  }
 
+  
   constructor() { }
 
   ngOnInit(): void {
   
-  }
-
-  getColor(){
-    return "green";
   }
 
   onSwitch(){

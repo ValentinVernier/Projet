@@ -25,7 +25,7 @@
        {{i}} {{x | uppercase}}
     </p>
 </div>
--->
+
 <p [style.background-color]="colorOne">
     Style.color est une couleur en props!
 </p>
@@ -56,4 +56,39 @@
     Avec du ngStyle maintenant
     Déclare un objet dedans
     Donc on peut en mettre plusieurs, donc plus de possibilité!
+</div>
+-->
+<p [ngClass]="{'text-center':true}">
+    Pk cette voix de merde
+</p>
+
+<div class="card shadow text-center"> 
+    <h2>
+        {{product.label}}
+    </h2>
+    
+    <hr>
+
+    <p>
+        {{product.price}} 
+        €
+    </p>
+
+    <hr>
+
+    <p>quantité:
+        <span [ngClass]="{
+            'badge': true,
+
+            'badge-success': product.stock > 5,
+
+            'badge-warning': product.stock <= 5,
+            
+            'badge-danger': product.stock ==  0
+        }">
+
+            {{ product.stock }} en stocks
+        </span>
+    </p>
+
 </div>
