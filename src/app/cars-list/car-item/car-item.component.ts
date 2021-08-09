@@ -24,4 +24,5 @@ export class CarItemComponent implements OnInit {
 
   }
 
+
 }
