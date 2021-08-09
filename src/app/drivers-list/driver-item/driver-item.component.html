@@ -20,8 +20,12 @@
             'badge-danger':driver.category === 'drag',
             'badge-warning':driver.category === 'formule 1'
         }">>
-            <span *ngIf="driver.category">Discipline: {{driver.category | uppercase }}</span>
+            <span *ngIf="driver.category">Discipline: {{driver.category | titlecase }}</span>
             <span *ngIf="driver.category ==''"> Discipline: NC</span>
+        </p>
+
+        <p>
+             {{driver.fullName}} a {{driver.likeIts}} Like<span *ngIf="driver.likeIts >1 || driver.likeIts <-1">s</span>
         </p>
         <div class="row justify-content-center">
             <button (click)="onLike()" class='btn btn-success mx-2'><i class="fas fa-thumbs-up"></i></button>
