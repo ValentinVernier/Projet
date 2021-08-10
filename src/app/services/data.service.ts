@@ -67,7 +67,7 @@ export class DataService {
       pays: "usa",
       coverImage: "./assets/img/drivers/danicapatrick.jpg",
       category: "nascar",
-      likeIts: 0
+      likeIts: 1
     },
     {
       fullName: "sebastien loeb",
@@ -95,7 +95,7 @@ export class DataService {
       pays: null,
       coverImage: "./assets/img/drivers/shirleymuldowney.jpg",
       category: "drag",
-      likeIts: 0
+      likeIts: 1
     },
     {
       fullName: "michael schumacher",
@@ -122,5 +122,12 @@ export class DataService {
     return this.drivers;
   }
 
+  sortCarsByBest(nb:number){
+    return this.getAllCars().sort((a:any, b:any) => (a.power > b.power ? -1 : 1)).splice(0, nb)
+  }
+
+  sortDriversByBest(nb:number){
+    return this.getAllDrivers().sort((a:any, b:any) => (a.likeIts > b.likeIts ? -1 : 1)).splice(0, nb)
+  }
 
 }
