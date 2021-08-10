@@ -15,6 +15,7 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
 import { FormsModule } from '@angular/forms';
 import { DriverItemComponent } from './drivers-list/driver-item/driver-item.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DriverItemComponent } from './drivers-list/driver-item/driver-item.comp
     HomePageComponent,
     FourOhFourComponent,
     CarItemComponent,
-    DriverItemComponent
+    DriverItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
