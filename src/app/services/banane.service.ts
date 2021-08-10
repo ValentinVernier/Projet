@@ -5,12 +5,13 @@ import { Injectable } from "@angular/core";
 
 export class BananeService {
 
-    fruit:string = "Banane Plantain";
+    fruit:string = "Banane Plantain - FROM API";
+    prix:number = 4;
 
     constructor(){}
 
     getFruit(){
-        console.log(this.fruit);
+        return this.fruit;
     }
 
 
