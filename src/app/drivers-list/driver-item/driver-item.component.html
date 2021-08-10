@@ -19,7 +19,7 @@
             'badge-info':driver.category === 'rallye',
             'badge-danger':driver.category === 'drag',
             'badge-warning':driver.category === 'formule 1'
-        }">>
+        }">
             <span *ngIf="driver.category">Discipline: {{driver.category | titlecase }}</span>
             <span *ngIf="driver.category ==''"> Discipline: NC</span>
         </p>
