@@ -8,17 +8,17 @@
     </p>
 </div> 
 
-<div class="card shadow text-center">
+<div class="card shadow text-center m-5">
   <h2>Nos pilotes d'exceptions</h2>
 </div>
-<div class="card-deck  justify-content-center">
+<div class="card-deck m-5 justify-content-center">
   <app-driver-item  *ngFor="let oneDriver of bestDrivers" [driver]="oneDriver" ></app-driver-item>
 </div>
 
-<div class="card shadow text-center">
-  <h2>Nos voitures d'exceptions</h2>
+<div class="card shadow text-center m-5">
+  <h2>Nos meilleures voitures</h2>
 </div>
 
-<div class="card-deck  justify-content-center">
+<div class="card-deck m-5 justify-content-center">
   <app-car-item  *ngFor="let oneCar of bestCars" [car]="oneCar" ></app-car-item>
 </div>
