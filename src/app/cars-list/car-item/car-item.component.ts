@@ -1,5 +1,6 @@
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, Input, OnInit } from '@angular/core';
+import { Car } from 'src/app/models/Car';
 
 @Component({
   selector: 'app-car-item',
@@ -11,7 +12,7 @@ export class CarItemComponent implements OnInit {
   bookingMessage:string = "Reservez maintenant!";
   isBooked:boolean = false;
   
-  @Input() car:any; 
+  @Input() car!:Car; 
 
   constructor() { }
 

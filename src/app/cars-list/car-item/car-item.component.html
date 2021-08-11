@@ -6,8 +6,8 @@
         <img [src]="car.coverImage" class="img-fluid" alt="photo {{car.name}}">
         <hr>
         <p>
-            <span *ngIf="car.pays">Origine: {{car.pays | uppercase }}</span>
-            <span *ngIf="car.pays ==''"> Origine: NC</span>
+            <span *ngIf="car.country">Origine: {{car.country | uppercase }}</span>
+            <span *ngIf="car.country ==''"> Origine: NC</span>
         </p>
         <p [ngClass]="{
             'badge': true,
