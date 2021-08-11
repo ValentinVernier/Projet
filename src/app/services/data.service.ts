@@ -67,14 +67,14 @@ export class DataService {
       pays: "usa",
       coverImage: "./assets/img/drivers/danicapatrick.jpg",
       category: "nascar",
-      likeIts: 1
+      likeIts: 3
     },
     {
       fullName: "sebastien loeb",
       pays: "france",
       coverImage: "./assets/img/drivers/Loeb.jpg",
       category: "rallye",
-      likeIts: 1
+      likeIts: 2
     },
     {
       fullName: "molly taylor",
