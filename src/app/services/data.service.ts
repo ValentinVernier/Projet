@@ -123,11 +123,12 @@ export class DataService {
   }
 
   sortCarsByBest(nb:number){
-    return this.getAllCars().sort((a:any, b:any) => (a.power > b.power ? -1 : 1)).splice(0, nb)
+    return this.getAllCars().sort((a:any, b:any) => (a.power > b.power ? -1 : 1)).slice(0, nb)
+
   }
 
   sortDriversByBest(nb:number){
-    return this.getAllDrivers().sort((a:any, b:any) => (a.likeIts > b.likeIts ? -1 : 1)).splice(0, nb)
+    return this.getAllDrivers().sort((a:any, b:any) => (a.likeIts > b.likeIts ? -1 : 1)).slice(0, nb)
   }
 
 }

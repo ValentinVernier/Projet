@@ -9,16 +9,17 @@ import { DataService } from '../services/data.service';
 export class HomePageComponent implements OnInit {
   title:string = "Drive-X"
   
-  drivers:any = this.data.getAllDrivers();
-
   bestDrivers:any = this.data.sortDriversByBest(3);
 
-  bestCars:any = this.data.sortCarsByBest(3);
+  bestCars:any = this.data.sortCarsByBest(2);
 
 
   constructor(private data:DataService) { }
 
   ngOnInit(): void {
+    this.bestDrivers = this.data.sortDriversByBest(3);
+    this.bestCars = this.data.sortCarsByBest(2);
+
   }
 
 }
