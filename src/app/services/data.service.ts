@@ -11,7 +11,7 @@ export class DataService {
   cars:Car[] = [
     {
       name: "pagani huayra",
-      country: "Croatie" ,
+      country: "Italie" ,
       coverImage:"./assets/img/cars/pagani.jpg",
       power: 765,
       perf: 3.2

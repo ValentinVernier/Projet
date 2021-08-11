@@ -16,6 +16,7 @@ export class CarItemComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit(): void {
   }
 
