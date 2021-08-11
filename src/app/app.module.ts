@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { DriverItemComponent } from './drivers-list/driver-item/driver-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { DataService } from './services/data.service';
+import { NewCarComponent } from './cars-list/new-car/new-car.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DataService } from './services/data.service';
     FourOhFourComponent,
     CarItemComponent,
     DriverItemComponent,
-    FooterComponent
+    FooterComponent,
+    NewCarComponent
   ],
   imports: [
     BrowserModule,
