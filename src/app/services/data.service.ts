@@ -123,6 +123,10 @@ export class DataService {
     return this.drivers;
   }
 
+  addCar(car:Car){
+    this.cars.push(car);
+  }
+  
   sortCarsByBest(nb:number){
     return this.getAllCars().sort((a:any, b:any) => (a.power > b.power ? -1 : 1)).slice(0, nb)
 
