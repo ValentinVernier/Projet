@@ -7,6 +7,8 @@ import { Driver } from '../models/Driver';
 })
 export class DataService {
 
+  category:string[] = ["gymkhana", "nascar", "rallye", "drag", "formule 1"];
+
   constructor() { }
 
   cars:Car[] = [
@@ -118,6 +120,10 @@ export class DataService {
 
   getAllCars():any {
     return this.cars;
+  }
+
+  getAllCategories():any {
+    return this.category;
   }
 
   getAllDrivers():any{

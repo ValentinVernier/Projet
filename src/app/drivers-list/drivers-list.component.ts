@@ -27,8 +27,7 @@ export class DriversListComponent implements OnInit {
       myForm.value["coverImage"],
       myForm.value["discipline"],
     );
-    this.data.addDriver(driver);
-    this.router.navigate(['/driver'])
+    
   }
   */
 
