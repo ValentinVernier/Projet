@@ -14,7 +14,7 @@ export class DataFromApiComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.http.get("https://reqrest.in/api/user?page=2").subscribe( data => {this.response = data} )
+    this.http.get<any>("https://reqres.in/api/user?page=2").subscribe( data => {this.response = data} )
   }
 
 }
