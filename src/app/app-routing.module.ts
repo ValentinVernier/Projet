@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 const routes: Routes = [
   { path: "" , component: HomePageComponent },
   { path: "cars" , component: CarsListComponent },
+  { path: "api" , component: CarsListComponent },
   { path: "new-car" , component: NewCarComponent },
   { path: "drivers" , component: DriversListComponent },
   { path: "not-found" , component: FourOhFourComponent },

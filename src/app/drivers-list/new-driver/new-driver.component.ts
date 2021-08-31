@@ -43,7 +43,7 @@ export class NewDriverComponent implements OnInit {
     )
     //console.log(driver);
     this.data.addDriver(driver);
-    this.router.navigate(['/driver'])
+    this.router.navigate(['/drivers'])
   }
 
   minLong = 2;
