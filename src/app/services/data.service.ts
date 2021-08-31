@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Car } from '../models/Car';
+import { Driver } from '../models/Driver';
 
 @Injectable({
   providedIn: 'root'
@@ -55,7 +56,7 @@ export class DataService {
 
   ]
 
-  drivers:any =  [
+  drivers: Driver[] =  [
     {
       fullName: "ken block",
       pays: "usa",
@@ -93,7 +94,7 @@ export class DataService {
     },
     {
       fullName: "shirley muldowney",
-      pays: null,
+      pays: "USA",
       coverImage: "./assets/img/drivers/shirleymuldowney.jpg",
       category: "drag",
       likeIts: 1
@@ -125,6 +126,11 @@ export class DataService {
 
   addCar(car:Car){
     this.cars.push(car);
+  }
+
+
+  addDriver(driver:any){
+    this.drivers.push(driver);
   }
   
   sortCarsByBest(nb:number){
