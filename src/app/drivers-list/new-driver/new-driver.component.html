@@ -1,28 +1,29 @@
 <h1>Ajouter un pilote</h1>
 <div class="col-6 border shadow my-5 p-5">
-    <form > 
+    <form (ngSubmit)="onSubmit()" [formGroup]="driverForm"> 
+
         <div class="form-group">
             <label for="fullName">Nom Prénom</label>
-            <input type="text" class="form-control" name="fullName" id="fullName" ngModel>
+            <input type="text" class="form-control" formControlName="fullName" id="name" ngModel>
             
         </div>
+
         <div class="form-group">
             <label for="pays">Pays d'origine</label>
-            <input type="text" class="form-control" name="pays"  id="pays" ngModel>
+            <input type="text" class="form-control" formControlName="pays"  id="pays" ngModel>
         </div>
+
         <div class="form-group">
             <label for="coverImage"> Photo du pilote (url)</label>
-            <input type="text" class="form-control" name="coverImage" id="coverImage" ngModel>
+            <input type="text" class="form-control" formControlName="coverImage" id="coverImage" ngModel>
         </div>
+
         <div class="form-group">
-            <label for="category">Catégorie</label>
-            <input type="text" class="form-control" name="category" id="category" ngModel>
+            <label for="category">Discipline</label>
+            <input type="text" class="form-control" formControlName="category" id="category" ngModel>
         </div>
-        <div class="form-group">
-            <label for="likeIts">Nb de like</label>
-            <input type="number" class="form-control" name="perf" id="perf" ngModel>
-        </div>
-        <button type="submit" class="btn btn-success my-5">Enregistrer</button>
+       
+        <button type="submit" [disabled]="driverForm.invalid" class="btn btn-success my-5">Enregistrer</button>
 
     </form>
 </div>

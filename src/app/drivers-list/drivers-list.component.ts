@@ -18,7 +18,9 @@ export class DriversListComponent implements OnInit {
     this.drivers = this.data.getAllDrivers();
   }
 
+  /*
   onSubmit(myForm: NgForm){
+    const formValue = this.driverForm.value;
     const driver = new this.drivers(
       myForm.value["fullName"],
       myForm.value["pays"],
@@ -28,6 +30,6 @@ export class DriversListComponent implements OnInit {
     this.data.addDriver(driver);
     this.router.navigate(['/driver'])
   }
-  
+  */
 
 }

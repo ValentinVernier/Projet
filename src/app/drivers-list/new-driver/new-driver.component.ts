@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Driver } from 'src/app/models/Driver';
 import { DataService } from 'src/app/services/data.service';
 
@@ -9,14 +10,33 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class NewDriverComponent implements OnInit {
   
-  pilote: Driver = new Driver("david hasselhoff", "allemand","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGWzXZDb2kx4c_JE3QpuE7iC0y2q97CWUtnEsFEs4a1J4HVxVkYQFPlxDFqfK2feUhP3I&usqp=CAU","formule 1");
+  driverForm!: FormGroup;
 
-  constructor(private data:DataService) { }
+  constructor(private data:DataService,
+              private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.createForm();
+  }
 
-    this.data.addDriver(this.pilote);
+  createForm(){
+    this.driverForm = this.formBuilder.group({
+      fullName: ['', Validators.required],
+      pays: ['', [Validators.required, Validators.minLength(2)]],
+      coverImage: ['', Validators.required],
+      category: ['', Validators.required]
+    })
+  }
+
+  onSubmit(){
+    const formValue = this.driverForm.value;
+    const driver = new Driver(
+      formValue['fullName'],
+      formValue['pays'],
+      formValue['coverImage'],
+      formValue['category']
+    )
+    console.log(driver);
   }
 
 }
-
